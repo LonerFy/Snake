@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Snake</title>
+  <meta name="description" content="Snake en néon cyberpunk — bords traversables, vitesse progressive, meilleur score sauvegardé." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="stage">
+    <header class="hud">
+      <h1 class="title">Neon Snake</h1>
+      <div class="scores">
+        <div class="score-block">
+          <span class="score-label">score</span>
+          <span class="score-value" id="score">0</span>
+        </div>
+        <div class="score-block">
+          <span class="score-label">meilleur</span>
+          <span class="score-value" id="best-score">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <canvas id="game-canvas" width="500" height="500"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="overlay-title">Neon Snake</h2>
+        <p id="overlay-message">Flèches ou WASD pour bouger.</p>
+        <button id="overlay-button" type="button">Jouer</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="dpad" aria-hidden="false">
+        <button type="button" class="dpad-btn dpad-up" data-dir="UP" aria-label="Haut">▲</button>
+        <div class="dpad-row">
+          <button type="button" class="dpad-btn" data-dir="LEFT" aria-label="Gauche">◀</button>
+          <button type="button" class="dpad-btn" data-dir="DOWN" aria-label="Bas">▼</button>
+          <button type="button" class="dpad-btn" data-dir="RIGHT" aria-label="Droite">▶</button>
+        </div>
+      </div>
+      <p class="hint">Espace pour mettre en pause. Les bords sont traversables.</p>
+    </div>
+  </main>
+
+  <script src="dist/game.js"></script>
+</body>
+</html>

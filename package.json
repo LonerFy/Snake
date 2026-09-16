@@ -1,0 +1,12 @@
+{
+  "name": "neon-snake",
+  "version": "1.0.0",
+  "description": "Snake en TypeScript, thème néon/cyberpunk, déployable sur GitHub Pages.",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
